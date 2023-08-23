@@ -1,0 +1,60 @@
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+record,timestamp,CPU_ALL:User%,CPU_ALL:Sys%,DISKBUSY:nvme0n1,DISKREAD:nvme0n1,DISKWRITE:nvme0n1
+0,1692722252,1.7,0.5,59.3,220868.4,3.9
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+1,1692722253,0.5,0.3,99.7,370427.7,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+2,1692722254,0.6,0.2,101.0,372257.0,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+3,1692722255,0.0,0.2,99.7,372195.7,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+4,1692722256,0.2,0.2,99.8,372391.7,363.2
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+5,1692722257,0.0,0.2,99.8,373225.0,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+6,1692722258,0.0,0.2,101.0,373076.8,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+7,1692722259,0.1,0.2,99.8,373002.9,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+8,1692722260,0.1,0.3,99.8,373075.1,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+9,1692722261,0.1,0.2,99.8,371503.0,4.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+10,1692722262,0.5,0.3,101.0,366346.0,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+11,1692722263,0.0,0.2,99.7,373490.3,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+12,1692722264,0.5,0.3,99.8,369370.2,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+13,1692722265,0.1,0.3,99.8,371641.8,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+14,1692722266,0.5,0.2,101.0,366721.0,4.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+15,1692722267,0.5,0.2,99.8,370192.2,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+16,1692722268,0.0,0.2,99.7,372858.8,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+17,1692722269,0.0,0.2,99.8,372172.9,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+18,1692722270,0.1,0.2,101.0,373002.0,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+19,1692722271,0.2,0.3,99.8,374465.6,4.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+20,1692722272,0.0,0.2,99.8,371874.4,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+21,1692722273,0.0,0.2,99.8,372461.6,20.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+22,1692722274,0.4,0.3,101.0,374320.0,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+23,1692722275,0.2,0.3,99.8,370343.4,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+24,1692722276,0.1,0.2,99.8,372292.8,12.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+25,1692722277,0.1,0.2,99.8,371542.6,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+26,1692722278,1.0,0.4,99.8,368593.0,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+27,1692722279,0.0,0.2,101.0,366165.3,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
+28,1692722280,0.1,0.2,99.8,368198.9,0.0
+DEBUG: input_files=[<_io.TextIOWrapper name='test2/0-n01.nmon.csv' mode='r' encoding='UTF-8'>]
