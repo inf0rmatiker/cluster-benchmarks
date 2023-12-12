@@ -1,0 +1,20 @@
+; -- global fio settings that apply to all jobs --
+[global]
+ioengine=libaio
+direct=1
+rw=read
+size=16g
+directory=/mnt/cstor1/ccarlson/flash
+
+; -- individual job settings --
+[blocksize_128k]
+blocksize=128k
+
+[blocksize_1m]
+blocksize=1m
+
+[blocksize_16m]
+blocksize=16m
+
+[blocksize_64m]
+blocksize=64m
