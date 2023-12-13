@@ -1,16 +1,12 @@
 #!/bin/bash
 
-CUFILE_ENV_PATH_JSON=/root/gdsio_cufile.json
-GDS_TOOLS=/usr/local/cuda-12.3/gds/tools
-OUTPUT_DIR=/mnt/cstor1/ccarlson/flash
-WORKER_THREADS=64
-GPU_DEVICE_INDEX=0
-FILE_SIZE=1G
-IO_SIZE=2M
-READ=0
-WRITE=1
-RAND_READ=2
-RAND_WRITE=3
-GDS=0
+# Benchmark script to run gdsio using a .gdsio job file
 
-/usr/local/cuda-12.3/gds/tools/gdsio -I 1 -x 0 -i 2M -s 1G -d 0 -w 64 -D /mnt/cstor1/ccarlson/flash
+# Make sure you've added gdsio to your $PATH.
+# It can usually be found under /usr/local/cuda-<version>/gds/tools
+
+# Use a custom cufile.json instead of the default /etc/cufile.json
+export CUFILE_ENV_PATH_JSON="/home/hpcd/carlsonc/gdsio/cufile.json"
+export NUM_GDS_THREADS_PER_GPU=8
+
+gdsio write.gdsio

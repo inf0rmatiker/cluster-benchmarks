@@ -8,12 +8,19 @@
 #
 [global]
 name=gds-write
-#0,1,2,3,4,5,6
+#0 - Storage->GPU (GDS)
+#1 - Storage->CPU
+#2 - Storage->CPU->GPU
+#3 - Storage->CPU->GPU_ASYNC
+#4 - Storage->PAGE_CACHE->CPU->GPU
+#5 - Storage->GPU_ASYNC
+#6 - Storage->GPU_BATCH
+#7 - Storage->GPU_BATCH_STREAM
 xfer_type=0
 #IO type, rw=read, rw=write, rw=randread, rw=randwrite
 rw=write
 #block size, for variable block size can specify range e.g. bs=1M:4M:1M, (1M : start block size, 4M : end block size, 1M :steps in which size is varied)
-bs=1M
+bs=2M
 #file-size
 size=2G
 #secs
@@ -35,17 +42,17 @@ unaligned_random=0
 #file offset to start read/write from
 start_offset=0
 #alignment size for random IO
-alignment_size=64K
+#alignment_size=64K
 
 [job0]
 #numa node
-numa_node=0
+#numa_node=0
 #gpu device index (check nvidia-smi)
 gpu_dev_id=0
 #For Xfer mode 6, num_threads will be used as batch_size
-num_threads=$GDSIO_NUM_THREADS
+num_threads=$NUM_GDS_THREADS_PER_GPU
 #enable either directory or filename or url
-directory=/mnt/test0/job1
+directory=/lus/aiholus1/flash/carlsonc/gpu0
 #filename=/mnt/test0/gds-01
 #rdma_url=sockfs://192.168.0.1:18515
 #The following parameter can be used to specify per job start offset. If not defined global section's start offset would be used.
@@ -54,3 +61,38 @@ directory=/mnt/test0/job1
 #For Xfer mode 6, this is per batch i.e. for 1MB size with a batch size of 4 would
 #do 4 MB of I/O.
 #size = 8M
+
+[job1]
+gpu_dev_id=1
+num_threads=$NUM_GDS_THREADS_PER_GPU
+directory=/lus/aiholus1/flash/carlsonc/gpu1
+
+[job2]
+gpu_dev_id=2
+num_threads=$NUM_GDS_THREADS_PER_GPU
+directory=/lus/aiholus1/flash/carlsonc/gpu2
+
+[job3]
+gpu_dev_id=3
+num_threads=$NUM_GDS_THREADS_PER_GPU
+directory=/lus/aiholus1/flash/carlsonc/gpu3
+
+[job4]
+gpu_dev_id=4
+num_threads=$NUM_GDS_THREADS_PER_GPU
+directory=/lus/aiholus1/flash/carlsonc/gpu4
+
+[job5]
+gpu_dev_id=5
+num_threads=$NUM_GDS_THREADS_PER_GPU
+directory=/lus/aiholus1/flash/carlsonc/gpu5
+
+[job6]
+gpu_dev_id=6
+num_threads=$NUM_GDS_THREADS_PER_GPU
+directory=/lus/aiholus1/flash/carlsonc/gpu6
+
+[job7]
+gpu_dev_id=7
+num_threads=$NUM_GDS_THREADS_PER_GPU
+directory=/lus/aiholus1/flash/carlsonc/gpu7
