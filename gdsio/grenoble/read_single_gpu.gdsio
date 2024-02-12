@@ -1,0 +1,50 @@
+#
+# sample config file gdsio.
+# config file rules :
+#   -provide a global section defined with [global]
+#   -provide a job(s) must follow this signature [job-name-xxx]
+#   -use newline to mark end of each section except last
+#   -for comments, add # to the start of a line
+#
+[global]
+name=gds-read
+#0 - Storage->GPU (GDS)
+#1 - Storage->CPU
+#2 - Storage->CPU->GPU
+#3 - Storage->CPU->GPU_ASYNC
+#4 - Storage->PAGE_CACHE->CPU->GPU
+#5 - Storage->GPU_ASYNC
+#6 - Storage->GPU_BATCH
+#7 - Storage->GPU_BATCH_STREAM
+xfer_type=0
+#IO type, rw=read, rw=write, rw=randread, rw=randwrite
+rw=read
+#block size, for variable block size can specify range e.g. bs=1M:4M:1M, (1M : start block size, 4M : end block size, 1M :steps in which size is varied)
+bs=16M
+#file-size
+size=4G
+#secs
+runtime=20
+#use 1 for enabling verification
+do_verify=0
+#skip cufile buffer registration, ignored in cpu mode
+skip_bufregister=0
+#set up NVlinks, recommended if p2p traffic is cross node
+enable_nvlinks=1
+#use random seed
+random_seed=0
+#fill request buffer with random data
+fill_random=0
+#refill io buffer after every write
+refill_buffer=0
+#use random offsets which are not page-aligned
+unaligned_random=0
+#file offset to start read/write from
+start_offset=0
+#alignment size for random IO
+#alignment_size=64K
+
+[job0]
+gpu_dev_id=0
+num_threads=$NUM_GDS_THREADS_PER_GPU
+directory=/e1000/ccarlson/gds/gpu0

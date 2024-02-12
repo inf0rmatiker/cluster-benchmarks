@@ -20,15 +20,15 @@ xfer_type=0
 #IO type, rw=read, rw=write, rw=randread, rw=randwrite
 rw=write
 #block size, for variable block size can specify range e.g. bs=1M:4M:1M, (1M : start block size, 4M : end block size, 1M :steps in which size is varied)
-bs=2M
+bs=16M
 #file-size
-size=2G
+size=4G
 #secs
-runtime=60
+#runtime=60
 #use 1 for enabling verification
 do_verify=0
 #skip cufile buffer registration, ignored in cpu mode
-skip_bufregister=1
+skip_bufregister=0
 #set up NVlinks, recommended if p2p traffic is cross node
 enable_nvlinks=1
 #use random seed
@@ -44,6 +44,7 @@ start_offset=0
 #alignment size for random IO
 #alignment_size=64K
 
+
 [job0]
 #numa node
 #numa_node=0
@@ -52,7 +53,7 @@ gpu_dev_id=0
 #For Xfer mode 6, num_threads will be used as batch_size
 num_threads=$NUM_GDS_THREADS_PER_GPU
 #enable either directory or filename or url
-directory=$GDSIO_OUTPUT_ROOT/gpu0
+directory=/e1000/ccarlson/gds/gpu0
 #filename=/mnt/test0/gds-01
 #rdma_url=sockfs://192.168.0.1:18515
 #The following parameter can be used to specify per job start offset. If not defined global section's start offset would be used.
@@ -65,34 +66,34 @@ directory=$GDSIO_OUTPUT_ROOT/gpu0
 [job1]
 gpu_dev_id=1
 num_threads=$NUM_GDS_THREADS_PER_GPU
-directory=$GDSIO_OUTPUT_ROOT/gpu1
+directory=/e1000/ccarlson/gds/gpu1
 
 [job2]
 gpu_dev_id=2
 num_threads=$NUM_GDS_THREADS_PER_GPU
-directory=$GDSIO_OUTPUT_ROOT/gpu2
+directory=/e1000/ccarlson/gds/gpu2
 
 [job3]
 gpu_dev_id=3
 num_threads=$NUM_GDS_THREADS_PER_GPU
-directory=$GDSIO_OUTPUT_ROOT/gpu3
+directory=/e1000/ccarlson/gds/gpu3
 
 [job4]
 gpu_dev_id=4
 num_threads=$NUM_GDS_THREADS_PER_GPU
-directory=$GDSIO_OUTPUT_ROOT/gpu4
+directory=/e1000/ccarlson/gds/gpu4
 
 [job5]
 gpu_dev_id=5
 num_threads=$NUM_GDS_THREADS_PER_GPU
-directory=$GDSIO_OUTPUT_ROOT/gpu5
+directory=/e1000/ccarlson/gds/gpu5
 
 [job6]
 gpu_dev_id=6
 num_threads=$NUM_GDS_THREADS_PER_GPU
-directory=$GDSIO_OUTPUT_ROOT/gpu6
+directory=/e1000/ccarlson/gds/gpu6
 
 [job7]
 gpu_dev_id=7
 num_threads=$NUM_GDS_THREADS_PER_GPU
-directory=$GDSIO_OUTPUT_ROOT/gpu7
+directory=/e1000/ccarlson/gds/gpu7
